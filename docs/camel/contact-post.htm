@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Camel Discography Home Page - Contact Skylines</title>
+<script>
+function isLegalString(str,chars) {
+	for (var x=0; x<str.length; x++) {
+		if (chars.indexOf (str.charAt(x)) < 0)
+			return false;
+	}
+	return true;
+}
+
+function isValidEmail(str) {
+	var legalChars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_01234567890";
+	var sp1 = str.split ("@");
+	if (sp1.length != 2)
+		return false;
+	for (var x=0; x<2; x++) {
+		if (sp1[x].length == 0)
+			return false;
+		var sp2 = sp1[x].split (".");
+		if ((x==1) && (sp2.length < 2))
+			return false;
+		for (var y=1; y<sp2.length; y++)
+			if ((sp2[y].length == 0) || (!isLegalString (sp2[y], legalChars)))
+				return false;
+	}
+	return true;
+}
+
+function validateForm() {
+	if (isValidEmail (document.myForm.from.value))
+		return true;
+	alert ("Please type a valid email address.");
+	return false;
+}
+
+</script>
+</head>
+<body background="images/main-bg.jpg" bgcolor="#ca9142" link="#0000ff" alink="#0000ff" vlink="#0000cc">
+
+<center><h2>Contact Skylines</h2></center>
+Due to the increase amount of Junk mail and Spam that I'm getting, I had to remove my valid email address from this site.
+If you wish to write, please remove the little extra "_but_no_spam" text from the following address: <b><font color=blue>camel_but_no_spam@magenta.co.il</font></b>.
+Or alternatively, you're welcome to send me your message using the form below:
+<p>
+<center><table><tr><td>
+<form name=myForm onSubmit="return (validateForm());" action="http://www.magenta.co.il/cgi-bin/forms.pl" method=post>
+<input type=hidden name=subject value="From Skylines Reader">
+<input type=hidden name=followupurl value="http://www.magenta.co.il/camel/contact2.htm">
+Your Name: <input name=sender size=70 value=""><br>
+Your e-mail: <input name=from size=70 value=""><br>
+Message Body:<br>
+<textarea name=body cols=64 rows=10></textarea><br>
+<center><input type=submit value="Send Message"></center>
+</form>
+</td></tr></table></center>
+<hr>
+<a href="http://www.magenta.co.il/camel" target="_top">Skylines - Camel Web Page</a> - created by <a href="http://www.magenta.co.il/camel/contact.htm">Ofir Zwebner</a><br>
+</body>
+</html>
+
+

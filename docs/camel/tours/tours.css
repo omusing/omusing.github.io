@@ -1,0 +1,57 @@
+A {
+	color=#000000;
+}
+
+.tourName {
+	background : #99dd99;
+	font-family : serif;
+	font-size : 16 px;
+	font-weight : bold;
+	width:300px;		
+}
+.tourControls {
+	background : #99dd99;
+	font-family : serif;
+	font-size : 12 px;
+	font-weight : normal;
+	width:300px;		
+}
+.tourNotes {
+	background : #cceecc;
+	font-family : serif;
+	font-size : 12 px;
+	font-weight : normal;
+}
+.gigsTable {
+	background : #eeeecc;
+	font-family : serif;
+	font-size : 12 px;
+	font-weight : normal;
+
+}
+.gigsRow2 {
+	background : #ddddbb;
+	font-family : serif;
+	font-size : 12 px;
+	font-weight : normal;
+}
+.requiresConfirmation {
+	color : #ff6666;
+	font-family : serif;
+	font-size : 11 px;
+	font-weight : normal;
+
+}
+.membersTable {
+	background : #ddeeee;
+	font-family : serif;
+	font-size : 12 px;
+	font-weight : normal;
+
+}
+textarea.database {
+    position: absolute;
+    top: -2000px;
+    visibility: hidden;
+    display: none;
+}
